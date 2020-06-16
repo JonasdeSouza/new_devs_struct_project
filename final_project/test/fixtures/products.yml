@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  alcoholic: 
+  category: one
+  quantity: 
+  price: 1.5
+
+two:
+  name: MyString
+  alcoholic: 
+  category: two
+  quantity: 
+  price: 1.5
