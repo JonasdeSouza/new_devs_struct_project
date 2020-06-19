@@ -1,0 +1,34 @@
+<h1>Editar Usuario</h1>
+
+<%= form_with model: @user do |form| %>
+  <div class="field">
+    <%= form.label :name, 'Nome' %>
+    <%= form.text_field :name, value: @user.name  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email, 'E-mail' %>
+    <%= form.email_field :email, value: @user.email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf, 'CPF' %>
+    <%= form.text_field :cpf, value: @user.cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address, 'Endereco' %>
+    <%= form.text_field :address, value: @user.address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birth_date, 'Data de nascimento' %>
+    <%= form.text_field :birth_date, value: @user.birth_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Atualizar autor" %>
+  </div>
+<% end %>
+
+<%= link_to 'Voltar', users_path %>

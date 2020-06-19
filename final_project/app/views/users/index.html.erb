@@ -2,16 +2,28 @@
   <thead>
   <tr>
     <th>Nome</th>
-    <th>Adm?</th>
+    <th>cpf</th>
+    <th>email</th>
+    <th>endereco</th>
+    <th>data de nascimento</th>
+    <th>admin?</th>
   </tr>
   </thead>
 
   <tbody>
   <% @users.each do |user| %>
-    <tr>
       <td><%= user.name %></td>
+      <td><%= user.cpf %></td>
+      <td><%= user.email %></td>
+      <td><%= user.address %></td>
+      <td><%= user.birth_date %></td>
       <td><%= user.adm %></td>
+      <td><%= link_to 'Detalhes', user_path(user) %></td>
+      <td><%= link_to 'Editar', edit_user_path(user) %></td>
+      <td><%= link_to 'Deletar', user_path(user), method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
     </tr>
+  <% end %>
     </tbody>
     </table>
-<% end %>
+
+<%= link_to 'Novo usuario', new_user_path %>

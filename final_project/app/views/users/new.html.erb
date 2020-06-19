@@ -1,0 +1,35 @@
+<h1>Novo Usuario</h1>
+
+
+<%= form_with model: @user do |form| %>
+  <div class="field">
+    <%= form.label :name, 'Nome' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email, 'Email' %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf, 'CPF' %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address, 'Endereco' %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birth_date, 'Data de nascimento' %>
+    <%= form.text_field :birth_date %>
+  </div>
+
+  <div class="actions">
+    <%=form.submit "Criar Usuario" %>
+  </div>
+<% end %>
+
+<%= link_to 'Voltar', users_path %>

@@ -1,0 +1,29 @@
+<h1>Detalhes do usuario</h1>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>CPF:</strong>
+  <%= @user.cpf %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>Data de nascimento:</strong>
+  <%= @user.birth_date %>
+</p>
+
+<%= link_to 'Editar', edit_user_path(@user) %> |
+<%= link_to 'Voltar', users_path %>
