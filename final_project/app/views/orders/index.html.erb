@@ -17,6 +17,7 @@
       <td><%= %></td>
       <td><%= link_to 'Editar pedido', edit_order_path(order) %></td>
       <td><%= link_to 'Novo pedido', new_order_path(order) %></td>
+      <td><%= link_to 'Detalhes do pedido', order_path(order) %></td>
       <td><%= link_to 'Excluir pedido', order_path(order), method: :delete, data: { confirm: 'Excluir?' } %></td>
     </tr>
   <% end %>
