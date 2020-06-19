@@ -1,9 +1,10 @@
 class OrdersController < ApplicationController
-
+ 
     def index
         @orders = Order.all
+        @products = Product.all
     end
-
+  
     def create
         order = Order.new(orders_params)
         begin
@@ -16,19 +17,19 @@ class OrdersController < ApplicationController
             redirect_to orders_path
         end
     end
-
+  
     def new
         @order = Order.new
     end
-
+  
     def edit
         @order = Order.find(params[:id])
     end
-
+  
     def show
         @order = Order.find(params[:id])
     end
-
+  
     def update
         order = Order.find(params[:id])
         begin
@@ -41,7 +42,7 @@ class OrdersController < ApplicationController
             redirect_to orders_path
         end
     end
-
+  
     def destroy
         order = Order.find(params[:id])
         begin
@@ -54,10 +55,11 @@ class OrdersController < ApplicationController
             redirect_to orders_path
         end
     end
-
+  
     private
-
+  
     def orders_params
         params.require('order').permit(:quantity)
     end
-end
+ end
+ 
