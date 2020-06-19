@@ -1,0 +1,35 @@
+<h1>Novo Produto</h1>
+
+<%= form_with model: @product do |form| %>
+  <div class="field">
+    <%= form.label :name, 'Nome' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alcoholic, 'Alcoólico?' %>
+    <%= form.select :alcoholic, [['Sim', true], ['Não', false]] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id, 'Categoria' %>
+    <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id] }) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity, 'Estoque' %>
+    <%= form.number_field :quantity %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :price, 'Preço' %>
+    <%= form.number_field :price, step: :any %>
+  </div>
+
+  <br>
+  <div class="actions">
+    <%= form.submit "Criar produto" %>
+  </div>
+
+<% end %>
