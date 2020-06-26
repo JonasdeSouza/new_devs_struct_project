@@ -1,0 +1,16 @@
+<h1>Novo pedido</h1>
+
+<%= form_with model: @order do |form| %>
+  <div class="field">
+    <%= form.label :quantity, 'Quantidade:' %>
+    <input type="number" id="quantity" name="quantity" min="1" max="10">
+    </div>
+
+    #descobrir como colocar o maximo dos produtos disponiveis
+  
+  <div class="actions">
+  <%= form.submit "Finalizar pedido" %>
+</div>
+<% end %>
+
+ <%= link_to 'Voltar', orders_path %>

@@ -1,0 +1,14 @@
+<h1>Detalhes do pedido</h1>
+
+    <p>
+      <strong>Produto:</strong>
+      <%= @order.product_id %>
+    </p>
+    
+    <p>
+      <strong>Quantidade:</strong>
+      <%= @order.quantity %>
+    </p>
+
+    <%= link_to 'Editar', edit_order_path(@order) %> |
+    <%= link_to 'Voltar', orders_path %>
