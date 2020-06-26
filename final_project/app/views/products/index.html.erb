@@ -1,0 +1,29 @@
+<h1>Nossos produtos</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Alcoólico?</th>
+    <th>Categoria</th>
+    <th>Estoque</th>
+    <th>Preço</th>
+    <th colspan="5"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%@products.each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.alcoholic %></td>
+      <td><%= product.category.name %></td>
+      <td><%= product.quantity %></td>
+      <td><%= product.price %></td>
+      <td><%= link_to 'Deletar', product_path(product), method: :delete, data: {confirm: 'Deletar produto?'} %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<br>
