@@ -1,4 +1,4 @@
-<h1>Pedidos</h1>
+<h1>Carrinho</h1>
 
 <table>
   <thead>
@@ -12,14 +12,18 @@
   <tbody>
   <% @orders.each do |order| %>
     <tr>
-      <td><%= order.product_id %></td>
+      <td><%= @products.find(order.product_id).name %></td>
       <td><%= order.quantity %></td>
-      <td><%= %></td>
+      <td>R$<%= '%.2f' % (@products.find(order.product_id).price * order.quantity) %></td>
       <td><%= link_to 'Editar pedido', edit_order_path(order) %></td>
-      <td><%= link_to 'Novo pedido', new_order_path(order) %></td>
       <td><%= link_to 'Detalhes do pedido', order_path(order) %></td>
       <td><%= link_to 'Excluir pedido', order_path(order), method: :delete, data: { confirm: 'Excluir?' } %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+<p>
+  <strong>Valor final: R$<%= '%.2f' % final_price %></strong>
+</p>
+
+<p><%= link_to 'Continuar Comprando', products_path %></p>

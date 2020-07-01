@@ -2,7 +2,7 @@
 
     <p>
       <strong>Produto:</strong>
-      <%= @order.product_id %>
+      <%= @product.name %>
     </p>
     
     <p>
@@ -10,5 +10,15 @@
       <%= @order.quantity %>
     </p>
 
-    <%= link_to 'Editar', edit_order_path(@order) %> |
+    <p>
+      <strong>Preço Total:</strong>
+      R$<%= '%.2f' % @total_value %>
+    </p>
+
+    <p>
+      <strong>Preço Individual:</strong>
+      R$<%= '%.2f' % @product.price %>
+    </p>
+
+    <%= link_to 'Editar', edit_order_path(@order) %>
     <%= link_to 'Voltar', orders_path %>
