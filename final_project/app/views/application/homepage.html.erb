@@ -2,137 +2,127 @@
 <html lang="en">
 
   <head>
-    <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+      <title>Lista 4 - parte B</title>
+      <link rel="stylesheet" href="custom.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <script src="https://kit.fontawesome.com/f9680fb690.js" crossorigin="anonymous"></script>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-      <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
-  
+
   <body>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  
-    <!-- Main navigation -->
-    <!-- Navbar -->
- <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar d-flex" style="background-color:lightgreen;">
-  <div class=" container-fluid">
-    <div class="d-flex justify-content-start">
-     <%= image_tag("logo-bsbebidas.png", :height => 150, :width => 300, :align => 'left', :alt => "logo BSBebidas") %>
-  </div>
-  <div class="d-flex justify-content-center"> 
-  <div class="collapse navbar-collapse container-fluid" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto smooth-scroll center p-3">
-        <li class="nav-item">
-          <a class="nav-link text-dark text-center font-weight-bold" data-offset="90">Touring</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark text-center font-weight-bold" data-offset="90">EXL</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark text-center font-weight-bold" data-offset="90">EX</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark text-center font-weight-bold" data-offset="30">LX</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark text-center font-weight-bold" data-offset="90">Energy</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-      <!-- Social Icon  -->
-      <div class="d-flex justify-content-end">
-      <ul class="navbar-nav nav-flex-icons">
-        <li class="nav-item">
-          <a class="nav-link text-dark text-center font-weight-bold" href="#team" data-offset="90">Shop</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark text-center font-weight-bold" href="#team" data-offset="90">Sign in</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">
-            <i class="fas fa-bars text-dark fa-lg"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </div>
-</nav>   
-    
-  <!-- Main navigation -->
-  <header>      
-    <!-- Full Page Intro -->
-    <div class="view" style="background-image: url('../images/hrv2.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-      <!-- Mask & flexbox options-->
-      <div class="mask rgba-gradient align-items-center">
-        <!-- Content -->
-        <div class="container">
-          <!--Grid row-->
-          <div class="row">
-            <!--Grid column-->
-            <div class="d-flex flex-column position col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
-              <h4 class="text-secondary text-center">Honda</h4>
-              <h1 class="font-weight-bold text-center">HR-V</h1>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </div>
-        <!-- Content -->
-      </div>
-      <!-- Mask & flexbox options-->
-      <div class="container position2">
-        <div class="d-flex flex-row mb-3">
-          <div class="row justify-content-md-center">
-            <i class="fas fa-tachometer-alt fa-2x"></i>
-            <div class="col-md-auto">
-                <h3 class="fonte font-weight-bold">Turbo 16V</h3>
-                <h6 class="text-dark text-center">1.5L</h6>
-            </div>
-            <div class="divider">
-              <img src="../images/black.jpeg" width="1" height="56">
-            </div>
-            <div class="col-md-auto">
-                <h3 class="fonte font-weight-bold">4.329 mm</h3>
-                <h6 class="text-dark text-center">Comprimento</h6>
-            </div>
-            <div class="divider">
-              <img src="../images/black.jpeg" width="1" height="56">
-            </div>
-            <div class="col-md-auto">
-              <h3 class="fonte font-weight-bold">6 UN</h3>
-              <h6 class="text-dark text-center ">Airbags</h6>
-            </div>
-            <div class="col-md-auto">
-              <button type="button" class="btn btn-outline-dark circle font-weight-bold rounded-pill">ORDER NOW</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Full Page Intro -->
-  </header>
-  <!-- Main navigation -->
 
-    <!--Main Layout-->
-    <main>
-      <div class="container">
-        <!--Grid row-->
-        <div class="row py-5">
-          <!--Grid column-->
-          <div class="col-md-12 text-center">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar d-flex" style="background-color: #194b03;">
+      <div class=" container-fluid">
+        <div class="d-flex justify-content-start">
+        <%= image_tag("logo.png", :height => 100, :width => 175, :align => 'left', :alt => "logo BSBebidas") %>
       </div>
-    </main>
-    <!--Main Layout-->
+      <div class="d-flex justify-content-center"> 
+      <div class="collapse navbar-collapse container-fluid" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto smooth-scroll center p-3">
+            <li class="nav-item">
+              <a class="nav-link text-dark text-center font-weight-bold" data-offset="90"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark text-center font-weight-bold" data-offset="90"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark text-center font-weight-bold" data-offset="90"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark text-center font-weight-bold" data-offset="30"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark text-center font-weight-bold" data-offset="90"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+          <!-- Social Icon  -->
+          <div class="d-flex justify-content-end ">
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light">
+                <i class="fas fa-shopping-cart text-white"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user text-white"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                aria-labelledby="navbarDropdownMenuLink-333 ">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        </div>
+        </div>
+      </div>
+    </nav>   
+      <!-- Main navigation -->
+      <header>      
+        <!-- Full Page Intro -->
+        <div class="view" style="background-color: #ffffff;">
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-gradient align-items-center">
+            <!-- Content -->
+            <div class="container">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="d-flex flex-column position col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                  <h4 class="text-secondary text-center">Honda</h4>
+                  <h1 class="font-weight-bold text-center">HR-V</h1>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Content -->
+          </div>
+          <!-- Mask & flexbox options-->
+          <div class="container position2">
+            <div class="d-flex flex-row mb-3">
+              <div class="row justify-content-md-center">
+                <i class="fas fa-tachometer-alt fa-2x"></i>
+                <div class="col-md-auto">
+                    <h3 class="fonte font-weight-bold">Turbo 16V</h3>
+                    <h6 class="text-dark text-center">1.5L</h6>
+                </div>
+                <div class="divider">
+                  <img src="../images/black.jpeg" width="1" height="56">
+                </div>
+                <div class="col-md-auto">
+                    <h3 class="fonte font-weight-bold">4.329 mm</h3>
+                    <h6 class="text-dark text-center">Comprimento</h6>
+                </div>
+                <div class="divider">
+                  <img src="../images/black.jpeg" width="1" height="56">
+                </div>
+                <div class="col-md-auto">
+                  <h3 class="fonte font-weight-bold">6 UN</h3>
+                  <h6 class="text-dark text-center ">Airbags</h6>
+                </div>
+                <div class="col-md-auto">
+                  <button type="button" class="btn btn-outline-dark circle font-weight-bold rounded-pill">ORDER NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Full Page Intro -->
+      </header>
+      <!-- Main navigation -->
+
   </body>
 </html>
