@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         login(params[:user][:email], params[:user][:password])
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Usuario cadastrado com sucesso' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -60,6 +60,12 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def states_for_select
+    file = File.read('./json-estados-brasileiros.json')
+    countries = JSON.parse(file)
+    countries.map {|e|  e['sigla']}
   end
 
   private
