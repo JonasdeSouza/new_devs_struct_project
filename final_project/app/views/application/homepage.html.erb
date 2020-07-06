@@ -70,7 +70,7 @@
       </div>
     </nav>   
       <!-- Main navigation -->
-      <header>      
+    <header>      
         <!-- Full Page Intro -->
         <div class="view" style="background-color: #ffffff;">
           <!-- Mask & flexbox options-->
@@ -81,16 +81,17 @@
               <div class="row">
                 <!--Grid column-->
                 <div class="d-flex flex-column position col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                  <!-- card -->
                   <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                       <div class="col-md-4">
-                        <img src="..." class="card-img" alt="...">
+                        <%= image_tag("vodka.jpg", :height => 150, :width => 175, :align => 'left', :alt => "logo BSBebidas") %>
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <h5 class="card-title">Vodka</h5>
+                          <p class="card-text">Smirnoff</p>
+                          <p class="card-text"><small class="text-muted">1 Litro</small></p>
                         </div>
                       </div>
                     </div>
@@ -133,53 +134,51 @@
           </div>
         </div>
 
-        <!-- Footer -->
-<footer class="page-footer font-small blue-grey lighten-5">
+      <!-- Footer -->
+      <footer class="page-footer font-small blue-grey lighten-5">
 
-  <div style="background-color: #194b03;">
-    <div class="container">
+        <div style="background-color: #194b03;">
+          <div class="container">
 
-      <!-- Grid row-->
-      <div class="row py-4 d-flex align-items-center">
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
 
-        <!-- Grid column -->
-        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+              <!-- Grid column -->
+              <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
 
-          <a style="padding: 20px;">
-            <%= image_tag("logo_nome.png", :height => 30, :width => 95, :align => 'left', :alt => "logo BSBebidas") %>
-          </a>
+                <a style="padding: 20px;">
+                  <%= image_tag("logo_nome.png", :height => 30, :width => 95, :align => 'left', :alt => "logo BSBebidas") %>
+                </a>
 
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f white-text mr-4 text-white fa-lg"> </i>
-          </a>
-         
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram white-text text-white fa-lg"> </i>
-          </a>
+                <!-- Facebook -->
+                <a class="fb-ic">
+                  <i class="fab fa-facebook-f white-text mr-4 text-white fa-lg"> </i>
+                </a>
+              
+                <!--Instagram-->
+                <a class="ins-ic">
+                  <i class="fab fa-instagram white-text text-white fa-lg"> </i>
+                </a>
 
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-6 col-lg-7 text-center text-md-right">
+                <p class="text-white"><i class="fas fa-home mr-3"></i> Brasília, BRA</p>
+                <p class="text-white"><i class="fas fa-phone mr-3"></i> +55 61 4002-8922</p>
+              </div>
+              <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+          </div>
         </div>
-        <!-- Grid column -->
 
-         <!-- Grid column -->
-        <div class="col-md-6 col-lg-7 text-center text-md-right">
-          <p class="text-white"><i class="fas fa-home mr-3"></i> Brasília, BRA</p>
-          <p class="text-white"><i class="fas fa-phone mr-3"></i> +55 61 4002-8922</p>
-        </div>
-        <!-- Grid column -->
+      </footer>
 
-      </div>
-      <!-- Grid row-->
-
-    </div>
-  </div>
-
-</footer>
-<!-- Footer -->
-        <!-- Full Page Intro -->
-      </header>
-      <!-- Main navigation -->
+    </header>
 
   </body>
 </html>
