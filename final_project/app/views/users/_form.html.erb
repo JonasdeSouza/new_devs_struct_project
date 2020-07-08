@@ -1,0 +1,72 @@
+<%= stylesheet_link_tag 'sign_in' %>
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "campos") %> incorretos:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container-fluid">
+  <form>
+    <div class="row justify-content-center">
+      <div class="form-group col-md-8">
+        <%= form.label :name, 'Nome Completo' %>
+        <%= form.text_field :name, class: 'form-control'%>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="form-group col-md-4">
+        <%= form.label :email, 'Email' %>
+        <%= form.email_field :email, class: 'form-control'%>
+      </div>
+      <div class="form-group col-md-4">
+        <%= form.label :password, 'Senha' %>
+        <%= form.password_field :password, class: 'form-control'%>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="form-group col-md-4">
+        <%= form.label :cpf, 'CPF' %>
+        <%= form.text_field :cpf, class: 'form-control'%>
+      </div>
+      <div class="form-group col-md-4">
+        <%= form.label :birth_date, 'Data de nascimento' %>
+        <%= form.date_field :birth_date, class: 'form-control'%>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="form-group col-md-8">
+        <%= form.label :address, 'Endereco' %>
+        <%= form.text_field :address, class: 'form-control'%>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="form-group col-md-4">
+        <label for="inputCity">Cidade</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputState">Estado</label>
+        <select id="inputState" class="form-control">
+          <option selected>Escolha</option>
+          <option></option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">CEP</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+    </div>
+    <div class="row">
+      <div id="button-padding" class="col-md-2"></div>
+    <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+    </div>
+    <% end %>
+  </form>
+  </div>

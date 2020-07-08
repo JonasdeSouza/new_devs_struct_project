@@ -27,7 +27,6 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @order = Order.new
-    @order.product_id = @product.id
   end
 
   def update

@@ -20,5 +20,15 @@
       R$<%= '%.2f' % @product.price %>
     </p>
 
+    <p>
+      <strong>Adicionado em:</strong>
+      <%= @order.created_at %>
+    </p>
+
+    <p>
+      <strong>Editado em:</strong>
+      <%= @order.updated_at %>
+    </p>
+
     <%= link_to 'Editar', edit_order_path(@order) %>
     <%= link_to 'Voltar', orders_path %>

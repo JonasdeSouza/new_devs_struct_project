@@ -1,8 +1,8 @@
-<h1>Detalhes do usuario</h1>
+<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nome:</strong>
-  <%= @user.name %>
+<strong>Nome:</strong>
+<%= @user.name %>
 </p>
 
 <p>
@@ -25,5 +25,15 @@
   <%= @user.birth_date %>
 </p>
 
-<%= link_to 'Editar', edit_user_path(@user) %> |
-<%= link_to 'Voltar', users_path %>
+<p>
+  <strong>Cryptrd password:</strong>
+  <%= @user.crypted_password %>
+</p>
+
+<p>
+  <strong>Salt:</strong>
+  <%= @user.salt %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
