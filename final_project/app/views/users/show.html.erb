@@ -17,7 +17,6 @@
 
 <p>
   <strong>Endereco:</strong>
-  <%= @user.address %>
 </p>
 
 <p>
@@ -31,9 +30,11 @@
 </p>
 
 <p>
-  <strong>Salt:</strong>
-  <%= @user.salt %>
-</p>
+  <strong>Endereco:</strong>
+  <%= @address.each do |address|  %>
+    <%= address.name %>
+  <% end %>
+    </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

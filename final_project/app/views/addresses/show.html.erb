@@ -1,0 +1,14 @@
+<h1>Detalhes do endereco</h1>
+
+    <p>
+      <strong>Produto:</strong>
+      <%= @address.user.id %>
+    </p>
+
+    <p>
+      <strong>Quantidade:</strong>
+      <%= @address.name %>
+    </p>
+
+    <%= link_to 'Editar', edit_address_path(@address) %> |
+    <%= link_to 'Voltar', addresses_path %>
