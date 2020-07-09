@@ -1,0 +1,16 @@
+<h1>Editar pedido</h1>
+
+<%= form_with model: @order do |form| %>
+  <div class="field">
+  <%= form.label :quantity, 'Quantidade:' %>
+  <%= form.text_field :quantity, value: @order.quantity %>
+  </div>
+
+#descobrir como coloca em forma de escolher numero
+
+  <div class="actions">
+    <%= form.submit "Atualizar álbum" %>
+  </div>
+<% end %>
+
+<%= link_to 'Voltar', orders_path %>

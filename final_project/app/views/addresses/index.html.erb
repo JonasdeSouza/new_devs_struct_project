@@ -1,0 +1,35 @@
+<h1>Endereços</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>usuario</th>
+    <th>CEP</th>
+    <th>Logradouro</th>
+    <th>Complemento</th>
+    <th>bairro</th>
+    <th>localidade</th>
+    <th>cidade</th>
+    <th>estado</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @address.each do |address| %>
+    <tr>
+      <td><%= address.user.name %></td>
+      <td><%= address.cep %></td>
+      <td><%= address.name %></td>
+      <td><%= address.street %></td>
+      <td><%= address.complement %></td>
+      <td><%= address.neighborhood %></td>
+      <td><%= address.city %></td>
+      <td><%= address.state %></td>
+      <td><%= link_to 'Editar endereco', edit_address_path(address) %></td>
+      <td><%= link_to 'Detalhes do endreco', address_path(address) %></td>
+      <td><%= link_to 'Excluir endereco', address_path(address), method: :delete, data: { confirm: 'Excluir?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+  <td><%= link_to 'Novo endreco', new_address_path %></td>
+</table>
