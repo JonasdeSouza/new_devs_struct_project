@@ -58,3 +58,11 @@ body {
   height: 200px;
   align-self: center;
 }
+
+.footer_fixar_rodape{
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+}
