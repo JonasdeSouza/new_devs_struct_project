@@ -40,14 +40,21 @@ h5 {
   left: 0px;
   right: 0;
   width: 6px;
-  height: 400px;
+  height: 0px;
 }
 
-.position2 {
-  position: absolute;
-  top: 859px;
-  left: 500px;
-  right: 0;
-  width: 6px;
-  height: 400px;
+body {
+  padding-top: 80px;
+}
+
+.show-cart li {
+  display: flex;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
 }
