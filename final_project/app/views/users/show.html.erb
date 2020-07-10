@@ -16,10 +16,6 @@
 </p>
 
 <p>
-  <strong>Endereco:</strong>
-</p>
-
-<p>
   <strong>Data de nascimento:</strong>
   <%= @user.birth_date %>
 </p>
@@ -31,7 +27,7 @@
 
 <p>
   <strong>Endereco:</strong>
-  <%= @address.each do |address|  %>
+  <% @user.addresses.each do |address|  %>
     <%= address.name %>
   <% end %>
     </p>

@@ -7,11 +7,11 @@ class UsersController < ApplicationController
 
 
   def show
-    @address = Address.find_by_user_id(params[:id])
   end
 
   def new
     @user = User.new
+    @user.addresses.build
   end
 
   def edit
@@ -64,6 +64,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :email, :cpf, :birth_date, :password, :salt)
+      params.require(:user).permit(:name, :email, :cpf, :birth_date, :password, :salt, addresses_attributes: [:id, :name, :cep, :street, :complement, :neighborhood, :city, :state])
     end
 end

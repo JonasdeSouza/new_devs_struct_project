@@ -1,10 +1,7 @@
 <h1>Novo endereco</h1>
 
 <%= form_with model: @address do |form| %>
-  <div class="field">
-    <%= form.label :user_id, 'usuario:' %>
-    <%= form.number_field :user_id %>
-  </div>
+
   <div class="field">
     <%= form.label :name, 'nome:' %>
     <%= form.text_field :name %>
@@ -33,7 +30,6 @@
     <%= form.label :state, 'estado:' %>
     <%= form.text_field :state %>
   </div>
-
   <div class="actions">
   <%= form.submit "Finalizar" %>
 </div>
