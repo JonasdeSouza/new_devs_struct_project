@@ -77,6 +77,11 @@
             <div class="d-flex flex-row mb-3">
               <div class="row justify-content-md-center">
                 <h4>Filtros:</h4>
+                <%= form_with model: @category do |form| %>
+                  <div class="field">
+                    <%= form.select :album_id, options_for_select(@categories.map { |category| [category.name, category.id] }) %>
+                  </div>
+                <% end %>
                 <!-- Main -->
                 <div class="container">
                   <div class="row">
