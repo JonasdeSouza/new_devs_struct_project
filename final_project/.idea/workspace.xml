@@ -11,17 +11,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c788a9d-c3fa-4956-b29b-4b951625dbdd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/logo-bsbebidas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/logo2.jpeg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/sign_in.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/json-estados-brasileiros" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/_user.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/initializers/sorcery.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20200630205602_sorcery_core.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20200630210124_sorcery_remember_me.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20200630210125_sorcery_reset_password.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20200630212026_sorcery_external.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/sessions_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/users_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/new_devs_struct_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/new_devs_struct_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/users.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/sessions.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sessions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/orders_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/orders_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/products_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/products_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/orders/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/orders/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/orders/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/orders/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200616201554_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200616193750_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,6 +277,8 @@
       <workItem from="1592577538772" duration="13300000" />
       <workItem from="1593450219973" duration="13440000" />
       <workItem from="1593706103735" duration="22764000" />
+      <workItem from="1594132618372" duration="6459000" />
+      <workItem from="1594215477103" duration="10266000" />
     </task>
     <servers />
   </component>
@@ -261,10 +302,11 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="312" y="80" width="732" height="640" key="#Inspections/0.30.1366.738@0.30.1366.738" timestamp="1592585561238" />
-    <state x="278" y="60" width="800" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592337893318">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="443" y="67" width="800" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594217869426">
+      <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="278" y="60" width="800" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1366.738@0.30.1366.738" timestamp="1592337893318" />
+    <state x="443" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1594217869426" />
     <state x="416" y="148" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594050706620">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -289,14 +331,19 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state width="1320" height="173" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1593561453289" />
+    <state width="263" height="514" key="HiddenNamespacesPopup" timestamp="1594217909929">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="263" height="514" key="HiddenNamespacesPopup/65.24.1855.1056@65.24.1855.1056" timestamp="1594217909929" />
     <state x="187" y="34" width="992" height="733" key="SettingsEditor" timestamp="1593790020796">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="187" y="34" width="992" height="733" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1593790020796" />
-    <state x="347" y="176" key="run.anything.popup" timestamp="1592342338708">
-      <screen x="0" y="30" width="1366" height="738" />
+    <state x="536" y="233" key="run.anything.popup" timestamp="1594229742355">
+      <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="347" y="176" key="run.anything.popup/0.30.1366.738@0.30.1366.738" timestamp="1592342338708" />
+    <state x="536" y="233" key="run.anything.popup/65.24.1855.1056@65.24.1855.1056" timestamp="1594229742355" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1594051582558">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

@@ -1,15 +1,13 @@
 <h1>Editar pedido</h1>
-
+<h3>Produto: <%= @product.name %></h3>
 <%= form_with model: @order do |form| %>
   <div class="field">
-  <%= form.label :quantity, 'Quantidade:' %>
-  <%= form.text_field :quantity, value: @order.quantity %>
+    <%= form.label :quantity, 'Quantidade' %>
+    <%= form.select :quantity, options_for_select(1..@product.quantity) %>
   </div>
 
-#descobrir como coloca em forma de escolher numero
-
   <div class="actions">
-    <%= form.submit "Atualizar álbum" %>
+    <%= form.submit "Atualizar pedido" %>
   </div>
 <% end %>
 

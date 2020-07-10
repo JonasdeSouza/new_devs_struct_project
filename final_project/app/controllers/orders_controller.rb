@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
     def index
         @orders = Order.all
         @products = Product.all
+        @users = User.all
     end
   
     def create
@@ -20,14 +21,18 @@ class OrdersController < ApplicationController
   
     def new
         @order = Order.new
+        @product = Product.find_by(params[:id])
     end
   
     def edit
         @order = Order.find(params[:id])
+        @product = Product.find(@order.product_id)
     end
   
     def show
         @order = Order.find(params[:id])
+        @product = Product.find(@order.product_id)
+        @total_value = @order.quantity * @product.price
     end
   
     def update
@@ -57,9 +62,11 @@ class OrdersController < ApplicationController
     end
   
     private
-  
+
     def orders_params
-        params.require('order').permit(:quantity)
+        params.require('order').permit(:quantity, :product_id, :user_id)
     end
+
+
  end
  
