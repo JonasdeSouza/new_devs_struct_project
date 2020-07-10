@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2020_06_16_205053) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
+    t.string "brand"
+    t.string "volume"
     t.boolean "alcoholic"
     t.bigint "category_id"
     t.integer "quantity"

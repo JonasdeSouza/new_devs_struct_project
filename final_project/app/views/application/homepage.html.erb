@@ -77,92 +77,22 @@
             <div class="d-flex flex-row mb-3">
               <div class="row justify-content-md-center">
                 <h4>Filtros:</h4>
-                 <!-- Nav -->
                 <!-- Main -->
                 <div class="container">
                   <div class="row">
+                    <% @products.each do |product|%> 
                     <div class="col">
                       <div class="card" style="width: 20rem;">
                         <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
                           <div class="card-block">
-                            <h4 class="card-title">Lemon</h4>
-                            <p class="card-text">Smirnoff</p>
-                            <p class="card-text"><small class="text-muted">1 Litro</small></p>
-                            <p class="card-text">R$10,00 <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">+</a></p>
+                            <h4 class="card-title"><%=product.name%></h4>
+                            <p class="card-text"><%=product.brand%></p>
+                            <p class="card-text"><small class="text-muted"><%=product.volume%></small></p>
+                            <p class="card-text"><%=product.price%><a href="#" data-name="<%=product.name%>" data-price="<%=product.price%>" class="add-to-cart btn btn-primary">+</a></p>
                           </div>
                       </div>
                     </div>
-                     <div class="col">
-                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
-                          <div class="card-block">
-                            <h4 class="card-title">Lemon</h4>
-                            <p class="card-text">Smirnoff</p>
-                            <p class="card-text"><small class="text-muted">1 Litro</small></p>
-                            <p class="card-text">R$10,00 <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">+</a></p>
-                          </div>
-                      </div>
-                    </div> <div class="col">
-                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
-                          <div class="card-block">
-                            <h4 class="card-title">Lemon</h4>
-                            <p class="card-text">Smirnoff</p>
-                            <p class="card-text"><small class="text-muted">1 Litro</small></p>
-                            <p class="card-text">R$10,00 <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">+</a></p>
-                          </div>
-                      </div>
-                    </div> <div class="col">
-                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
-                          <div class="card-block">
-                            <h4 class="card-title">Lemon</h4>
-                            <p class="card-text">Smirnoff</p>
-                            <p class="card-text"><small class="text-muted">1 Litro</small></p>
-                            <p class="card-text">R$10,00 <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">+</a></p>
-                          </div>
-                      </div>
-                    </div> <div class="col">
-                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
-                          <div class="card-block">
-                            <h4 class="card-title">Lemon</h4>
-                            <p class="card-text">Smirnoff</p>
-                            <p class="card-text"><small class="text-muted">1 Litro</small></p>
-                            <p class="card-text">R$10,00 <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">+</a></p>
-                          </div>
-                      </div>
-                    </div> <div class="col">
-                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
-                          <div class="card-block">
-                            <h4 class="card-title">Lemon</h4>
-                            <p class="card-text">Smirnoff</p>
-                            <p class="card-text"><small class="text-muted">1 Litro</small></p>
-                            <p class="card-text">R$10,00 <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">+</a></p>
-                          </div>
-                      </div>
-                    </div> <div class="col">
-                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
-                          <div class="card-block">
-                            <h4 class="card-title">Lemon</h4>
-                            <p class="card-text">Smirnoff</p>
-                            <p class="card-text"><small class="text-muted">1 Litro</small></p>
-                            <p class="card-text">R$10,00 <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">+</a></p>
-                          </div>
-                      </div>
-                    </div> <div class="col">
-                      <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
-                          <div class="card-block">
-                            <h4 class="card-title">Lemon</h4>
-                            <p class="card-text">Smirnoff</p>
-                            <p class="card-text"><small class="text-muted">1 Litro</small></p>
-                            <p class="card-text">R$10,00 <a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">+</a></p>
-                          </div>
-                      </div>
-                    </div>
+                    <% end %>
                   </div>
                 </div>
               </div>
