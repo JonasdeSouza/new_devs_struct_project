@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.text :address
       t.date :birth_date
       t.boolean :adm
+      t.float :balance
 
       t.timestamps
     end

@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2020_06_30_212026) do
     t.text "address"
     t.date "birth_date"
     t.boolean "adm"
+    t.float "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "crypted_password"
