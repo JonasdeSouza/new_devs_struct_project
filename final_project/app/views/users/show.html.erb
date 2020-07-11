@@ -34,6 +34,17 @@
   <strong>Salt:</strong>
   <%= @user.salt %>
 </p>
-
+<% if !current_user.nil? and current_user.id == @user.id %>
+<p>
+  <strong>Saldo:</strong>
+  <% if @user.balance.nil?%>
+  <% @user.balance = 0 %>
+  <% end %>
+  R$<%= '%.2f' % @user.balance %>
+</p>
+  <%= link_to 'Depositar dinheiro', add_money_user_path(@user)%>
+  <%= link_to 'Recuperar dinheiro', retrieve_money_user_path(@user)%>
+<% end %>
+<br>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
