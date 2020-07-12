@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.create(name: 'admin', email: 'admin@admin.com', cpf: '00000000001', birth_date: '01/01/0001', adm: true, password: 'admin')
 user.save!
+Product.create(name: 'sukita', brand: 'doBem', volume:'1L', alcoholic: false, category_id: 1, quantity: 4, price: 3.99)
+Category.create(name: 'suco')

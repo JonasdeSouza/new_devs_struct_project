@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'application#homepage'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root :to => 'users#index'
   resources :users, :products, :orders, :addresses
   #Rotas para as páginas de depositar e retirar dinheiro da conta
   resources :users do
@@ -14,6 +15,4 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   get '/log_in', to: 'sessions#new', as: :log_in
   delete '/log_out', to: 'sessions#destroy', as: :log_out
-
 end
-
