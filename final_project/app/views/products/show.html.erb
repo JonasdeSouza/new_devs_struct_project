@@ -22,5 +22,39 @@
 
 <p>
   <strong>Preço:</strong>
-  <%= @product.price %>
+  R$<%= '%.2f' %  @product.price %>
+</p>
+
+<% if current_user.nil? %>
+  <h5>Logue em sua conta para comprar o produto <%= link_to 'Logar', log_in_path %></h5>
+
+<% elsif in_cart?(@product) %>
+  <h4>Produto já consta em seu carrinho.<%= link_to 'Ver', orders_path %></h4>
+
+<% else %>
+  <h4>Comprar</h4>
+  <%= form_with model: @order do |form| %>
+    <div class="field">
+      <%= form.label :quantity, 'Quantidade:' %>
+      <%= form.select :quantity, options_for_select(1..@product.quantity) %>
+    </div>
+
+    <div class="field">
+      <%= form.label :user_id, 'Usuário:'%>
+      <%= form.select :user_id, [[current_user.name, current_user.id]] %>
+    </div>
+
+    <div class="field">
+      <%= form.label :product_id, 'Produto:'%>
+      <%= form.select :product_id, [[@product.name, @product.id]] %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Adicionar ao carrinho" %>
+    </div>
+
+  <% end %>
+<% end %>
+<p>
+  <%= link_to 'Voltar', products_path %>
 </p>

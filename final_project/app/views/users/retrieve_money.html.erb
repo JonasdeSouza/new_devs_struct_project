@@ -1,0 +1,32 @@
+<% if current_user.nil? %>
+  <h4><strong>Oops!</strong></h4>
+  <h4>Parece que você não está logado, logue para acessar essa página.</h4>
+  <%= link_to 'Logar', log_in_path %>
+<% else %>
+  <h4>
+    <% if current_user.balance.nil?%>
+      <% current_user.balance = 0 %>
+    <% end %>
+    Saldo Atual: R$<%= '%.2f' % current_user.balance %>
+  </h4>
+
+  <%= form_with model: current_user do |form| %>
+    <div class="field">
+      <%= form.label :balance, 'Valor a retirar:'%>
+      R$<%= '%.2f' % current_user.balance %>
+      <%= form.number_field :balance, step: :any, max: '0', min: -current_user.balance, value: '0' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :password, 'Confirme a senha para concluir a retirada de crédito' %>
+      <%= form.password_field :password%>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Retirar Dinheiro" %>
+    </div>
+  <% end %>
+
+
+<% end %>
+

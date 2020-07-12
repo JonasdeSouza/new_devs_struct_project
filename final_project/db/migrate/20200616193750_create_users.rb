@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :cpf
       t.date :birth_date
       t.boolean :adm
+      t.float :balance
 
 
       t.timestamps

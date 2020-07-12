@@ -1,25 +1,37 @@
-<h1>Pedidos</h1>
-
-<table>
-  <thead>
-  <tr>
-    <th>Produto</th>
-    <th>Quantidade</th>
-    <th>Preço total</th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @orders.each do |order| %>
+<% if current_user %>
+  <h1>Carrinho</h1>
+  <table>
+    <thead>
     <tr>
-      <td><%= order.product_id %></td>
-      <td><%= order.quantity %></td>
-      <td><%= %></td>
-      <td><%= link_to 'Editar pedido', edit_order_path(order) %></td>
-      <td><%= link_to 'Novo pedido', new_order_path(order) %></td>
-      <td><%= link_to 'Detalhes do pedido', order_path(order) %></td>
-      <td><%= link_to 'Excluir pedido', order_path(order), method: :delete, data: { confirm: 'Excluir?' } %></td>
+      <th>Produto</th>
+      <th>Quantidade</th>
+      <th>Preço total</th>
     </tr>
+    </thead>
+    <tbody>
+
+      <% @orders.each do |order| %>
+        <% if current_user.id == order.user_id %>
+          <tr>
+            <td><%= @products.find(order.product_id).name %></td>
+            <td><%= order.quantity %></td>
+            <td>R$<%= '%.2f' % (@products.find(order.product_id).price * order.quantity) %></td>
+            <td><%= link_to 'Editar pedido', edit_order_path(order) %></td>
+            <td><%= link_to 'Detalhes do pedido', order_path(order) %></td>
+            <td><%= link_to 'Excluir pedido', order_path(order), method: :delete, data: { confirm: 'Excluir?' } %></td>
+          </tr>
+        <% end %>
+      <% end %>
+
+    </tbody>
+  </table>
+
+  <p>
+    <strong>Valor final: R$<%= '%.2f' % final_price %></strong>
+  </p>
+  <p><%= link_to 'Continuar Comprando', products_path %></p>
+
+  <% else %>
+    <h5>Logue em sua conta para acessar seu carrinho</h5>
+    <%= link_to 'Logar', log_in_path %>
   <% end %>
-  </tbody>
-</table>
