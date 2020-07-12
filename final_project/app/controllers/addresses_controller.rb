@@ -5,21 +5,21 @@ class AddressesController < ApplicationController
   end
 
   def create
-    address = Address.new(address_params)
+    @address = Address.new(address_params)
     begin
-      address.save!
-      flash[:notice] = "#{address.name} adicionado com sucesso!"
+      @address.user_id = current_user.id
+      @address.save!
+      flash[:notice] = "#{@address.name} adicionado com sucesso!"
     rescue => exc
       puts exc
       flash[:notice] = exc
     ensure
-      redirect_to addresses_path
+      redirect_to user_path(current_user.id)
     end
   end
 
   def new
     @address = Address.new
-    @user = User.all
   end
 
   def edit
@@ -59,7 +59,7 @@ class AddressesController < ApplicationController
       puts exc
       flash[:notice] = exc
     ensure
-      redirect_to homepage
+      redirect_to user_path(current_user.id)
     end
   end
 

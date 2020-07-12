@@ -10,15 +10,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c788a9d-c3fa-4956-b29b-4b951625dbdd" name="Default Changelist" comment="model de endereco">
+    <list default="true" id="3c788a9d-c3fa-4956-b29b-4b951625dbdd" name="Default Changelist" comment="paginas de login, cadastro e model de endereco completamente funcionais">
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/addresses/_show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/addresses/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/addresses/_new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/addresses_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/addresses_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/addresses/_new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/addresses/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/addresses/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/addresses/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -245,7 +248,9 @@
       <workItem from="1592577538772" duration="13300000" />
       <workItem from="1593450219973" duration="13440000" />
       <workItem from="1593706103735" duration="22764000" />
-      <workItem from="1594051988797" duration="37873000" />
+      <workItem from="1594051988797" duration="42112000" />
+      <workItem from="1594399857092" duration="15291000" />
+      <workItem from="1594566358356" duration="7317000" />
     </task>
     <task id="LOCAL-00001" summary="merge user_login">
       <created>1594052118749</created>
@@ -268,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594255927375</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="paginas de login, cadastro e model de endereco completamente funcionais">
+      <created>1594344357863</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594344357863</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +301,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merge user_login" />
     <MESSAGE value="model de endereco" />
-    <option name="LAST_COMMIT_MESSAGE" value="model de endereco" />
+    <MESSAGE value="paginas de login, cadastro e model de endereco completamente funcionais" />
+    <option name="LAST_COMMIT_MESSAGE" value="paginas de login, cadastro e model de endereco completamente funcionais" />
   </component>
   <component name="WindowStateProjectService">
     <state x="312" y="80" width="732" height="640" key="#Inspections" timestamp="1592585561238">
@@ -328,22 +341,22 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="187" y="34" width="992" height="733" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1593790020796" />
-    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1594256106967">
+    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1594344366142">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1594256106967" />
+    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1594344366142" />
     <state x="488" y="315" width="389" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594309821430">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="488" y="315" width="389" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1366.738@0.30.1366.738" timestamp="1594309821430" />
-    <state x="347" y="176" key="run.anything.popup" timestamp="1592342338708">
+    <state x="347" y="176" key="run.anything.popup" timestamp="1594581013429">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="347" y="176" key="run.anything.popup/0.30.1366.738@0.30.1366.738" timestamp="1592342338708" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1594221303964">
+    <state x="347" y="176" key="run.anything.popup/0.30.1366.738@0.30.1366.738" timestamp="1594581013429" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1594579253834">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1594221303964" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.30.1366.738@0.30.1366.738" timestamp="1594579253834" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/final_project@db_migrate__1_.rcov" NAME="db:migrate (1) Coverage Results" MODIFIED="1593551596023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="final_project" />

@@ -1,6 +1,5 @@
-<h1>Editar endereço</h1>
-
-<%= form_with model: @addresses do |form_address| %>
+<h1>Novo endereco</h1>
+<%= form_with model: @address do |form_address| %>
   <p></p>
   <div class="row justify-content-center">
     <div class="col-md-8">
@@ -8,6 +7,7 @@
     </div>
   </div>
   <div class="row justify-content-center">
+
     <div class="form-group col-md-4">
       <%= form_address.label :name, 'Apelido do endereço' %>
       <%= form_address.text_field :name, class: 'form-control' %>
@@ -41,6 +41,7 @@
     <div class="form-group col-md-2">
       <%= form_address.label :state, 'Estado' %>
       <%= form_address.text_field :state, class: 'form-control' %>
+      <input id="user_id" name="user_id" type="hidden" value="<%= current_user.id %>" />
     </div>
   </div>
   <div class="row justify-content-center">
@@ -49,3 +50,5 @@
     </div>
   </div>
 <% end %>
+
+ <%= link_to 'Voltar', addresses_path %>

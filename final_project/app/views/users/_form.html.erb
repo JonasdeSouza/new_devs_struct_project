@@ -88,9 +88,14 @@
         </div>
       </div>
     <% end %>
+
     <div class="row justify-content-center">
       <div id="button-padding" class="col-md-8">
+        <% if @user.created_at == nil %>
         <%= form.submit :Cadastrar, class: 'btn btn-success' %>
+        <% else %>
+          <%= form.submit :Editar, class: 'btn btn-success' %>
+        <% end %>
       </div>
     </div>
   </div>
