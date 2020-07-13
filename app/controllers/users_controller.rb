@@ -52,12 +52,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def states_for_select
-    file = File.read('./json-estados-brasileiros.json')
-    countries = JSON.parse(file)
-    countries.map {|e|  e['sigla']}
-  end
-
   private
     def set_user
       @user = User.find(params[:id])

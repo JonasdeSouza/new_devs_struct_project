@@ -8,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.boolean :adm
       t.float :balance
 
-
       t.timestamps
     end
   end
