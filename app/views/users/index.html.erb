@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <% if logged_in? %>
-<h1>SALVE <%= current_user.name %> <%= link_to 'Log Out', log_out_path, method: :delete %></h1>
+<h1>Bem vindo <%= current_user.name %> <%= link_to 'Log Out', log_out_path, method: :delete %></h1>
 <% end %>
 
   <h1>Users</h1>

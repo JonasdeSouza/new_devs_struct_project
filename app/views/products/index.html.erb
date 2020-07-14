@@ -1,34 +1,50 @@
-<h1>Nossos produtos</h1>
+<% if logged_in? %>
+  <% if current_user.adm == true %>
+    <h1>Nossos produtos</h1>
 
-<table>
-  <thead>
-  <tr>
-    <th>Nome</th>
-    <th>Alcoólico?</th>
-    <th>Categoria</th>
-    <th>Estoque</th>
-    <th>Preço</th>
-    <th colspan="5"></th>
-  </tr>
-  </thead>
+    <table class="text-center">
+      <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Marca</th>
+        <th>Volume</th>
+        <th>Categoria</th>
+        <th>Preço</th>
+        <th colspan="5"></th>
+      </tr>
+      </thead>
 
-  <tbody>
-  <%@products.each do |product| %>
-    <tr>
-      <td><%= product.name %></td>
-      <td><%= product.alcoholic %></td>
-      <td><%= product.category.name %></td>
-      <td><%= product.quantity %></td>
-      <td>R$<%= '%.2f' %  product.price %></td>
-      <td><%= link_to 'Detalhes', product_path(product)%></td>
-      <td><%= link_to 'Editar', edit_product_path(product)%></td>
-      <td><%= link_to 'Deletar', product_path(product), method: :delete, data: {confirm: 'Deletar produto?'} %></td>
+      <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.brand %></td>
+          <td><%= product.volume %></td>
+          <td><%= product.category.name %></td>
+          <td>R$<%= '%.2f' % product.price %></td>
+          <td><%= link_to 'Detalhes', product_path(product) %></td>
 
-    </tr>
+          <% unless current_user.nil? %>
+            <% unless current_user.adm != true %>
+              <td><%= link_to 'Editar', edit_product_path(product) %></td>
+              <td><%= link_to 'Deletar', product_path(product), method: :delete, data: {confirm: 'Deletar produto?'} %></td>
+            <% end %>
+          <% end %>
+
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <br>
+
+    <% unless current_user.nil? %>
+      <% unless current_user.adm != true %>
+        <%= link_to 'Novo Produto', new_product_path %>
+      <% end %>
+    <% end %>
+    <%= link_to 'Meu Carrinho', orders_path %>
+
   <% end %>
-  </tbody>
-</table>
-<br>
-
-<%= link_to 'Novo Produto', new_product_path %>
-<%= link_to 'Meu Carrinho', orders_path%>
+<% else %>
+  <h3> Acesso negado, pagina somente para administradores</h3>
+<% end %>
