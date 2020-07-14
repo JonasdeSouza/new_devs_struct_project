@@ -21,27 +21,27 @@
     <div class="row justify-content-center">
       <div class="form-group col-md-8">
         <%= form.label :name, 'Nome Completo' %>
-        <%= form.text_field :name, class: 'form-control'%>
+        <%= form.text_field :name, class: 'form-control', placeholder: "Seu nome aqui"%>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="form-group col-md-4">
         <%= form.label :email, 'Email' %>
-        <%= form.email_field :email, class: 'form-control' %>
+        <%= form.email_field :email, class: 'form-control', placeholder: "example@email.com" %>
       </div>
       <div class="form-group col-md-4">
         <%= form.label :password, 'Senha' %>
-        <%= form.password_field :password, class: 'form-control' %>
+        <%= form.password_field :password, class: 'form-control', placeholder: "Sua senha, deve ter 4 caracteres ou mais" %>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="form-group col-md-4">
         <%= form.label :cpf, 'CPF' %>
-        <%= form.text_field :cpf, class: 'form-control' %>
+        <%= form.text_field :cpf, class: 'form-control', placeholder: "000.000.000-00" %>
       </div>
       <div class="form-group col-md-4">
         <%= form.label :birth_date, 'Data de nascimento' %>
-        <%= form.date_field :birth_date, class: 'form-control' %>
+        <%= form.date_field :birth_date, class: 'form-control', placeholder: "DD/MM/YYYY" %>
       </div>
     </div>
     <%= form.fields_for :addresses do |form_address| %>
@@ -54,37 +54,37 @@
       <div class="row justify-content-center">
         <div class="form-group col-md-4">
           <%= form_address.label :name, 'Apelido do endereço' %>
-          <%= form_address.text_field :name, class: 'form-control' %>
+          <%= form_address.text_field :name, class: 'form-control', placeholder: "Ex: Casa, Trabalho, Casa da minha vó" %>
         </div>
         <div class="form-group col-md-4">
           <%= form_address.label :cep, 'CEP' %>
-          <%= form_address.text_field :cep, class: 'form-control' %>
+          <%= form_address.text_field :cep, class: 'form-control', placeholder: "00000-000" %>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="form-group col-md-8">
           <%= form_address.label :street, 'Logradouro' %>
-          <%= form_address.text_field :street, class: 'form-control' %>
+          <%= form_address.text_field :street, class: 'form-control', placeholder: "Seu endereço" %>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="form-group col-md-8">
           <%= form_address.label :complement, 'Complemento' %>
-          <%= form_address.text_field :complement, class: 'form-control' %>
+          <%= form_address.text_field :complement, class: 'form-control', placeholder: "Ex: Centro" %>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="form-group col-md-4">
           <%= form_address.label :neighborhood, 'Bairro' %>
-          <%= form_address.text_field :neighborhood, class: 'form-control' %>
+          <%= form_address.text_field :neighborhood, class: 'form-control', placeholder: "Ex: Cruzeiro Velho" %>
         </div>
         <div class="form-group col-md-2">
           <%= form_address.label :city, 'Cidade' %>
-          <%= form_address.text_field :city, class: 'form-control' %>
+          <%= form_address.text_field :city, class: 'form-control', placeholder: "Ex: Brasília" %>
         </div>
         <div class="form-group col-md-2">
           <%= form_address.label :state, 'Estado' %>
-          <%= form_address.text_field :state, class: 'form-control' %>
+          <%= form_address.text_field :state, class: 'form-control', placeholder: "Ex: Distrito Federal" %>
         </div>
       </div>
     <% end %>
