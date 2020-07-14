@@ -1,14 +1,25 @@
-<h1>Editar pedido</h1>
-<h3>Produto: <%= @product.name %></h3>
-<%= form_with model: @order do |form| %>
-  <div class="field">
-    <%= form.label :quantity, 'Quantidade' %>
-    <%= form.select :quantity, options_for_select(1..@product.quantity) %>
-  </div>
+<% if current_user.nil? %>
+  <h4 style="color: red">Oops...Parece que você não está logado</h4>
+  <%= link_to 'Logar', log_in_path %>
 
-  <div class="actions">
-    <%= form.submit "Atualizar pedido" %>
-  </div>
+<% elsif current_user.id != @order.user_id%>
+  <h4 style="color: red">Oops...Parece que esse produto não pertence a sua Conta</h4>
+  <%= link_to 'Meu Carrinho', orders_path %>
+
+<% else %>
+
+  <h1>Editar pedido</h1>
+  <h3>Produto: <%= @product.name %></h3>
+  <%= form_with model: @order do |form| %>
+    <div class="field">
+      <%= form.label :quantity, 'Quantidade' %>
+      <%= form.select :quantity, options_for_select(1..@product.quantity) %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Atualizar pedido" %>
+    </div>
+  <% end %>
+
+  <%= link_to 'Voltar', orders_path %>
 <% end %>
-
-<%= link_to 'Voltar', orders_path %>

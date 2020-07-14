@@ -1,12 +1,12 @@
 <h1>Nossos produtos</h1>
 
-<table>
+<table class="text-center">
   <thead>
   <tr>
     <th>Nome</th>
-    <th>Alcoólico?</th>
+    <th>Marca</th>
+    <th>Volume</th>
     <th>Categoria</th>
-    <th>Estoque</th>
     <th>Preço</th>
     <th colspan="5"></th>
   </tr>
@@ -16,13 +16,18 @@
   <%@products.each do |product| %>
     <tr>
       <td><%= product.name %></td>
-      <td><%= product.alcoholic %></td>
+      <td><%= product.brand %></td>
+      <td><%= product.volume %></td>
       <td><%= product.category.name %></td>
-      <td><%= product.quantity %></td>
       <td>R$<%= '%.2f' %  product.price %></td>
       <td><%= link_to 'Detalhes', product_path(product)%></td>
+
+      <% unless current_user.nil? %>
+        <% unless current_user.adm != true %>
       <td><%= link_to 'Editar', edit_product_path(product)%></td>
       <td><%= link_to 'Deletar', product_path(product), method: :delete, data: {confirm: 'Deletar produto?'} %></td>
+        <%end %>
+      <% end %>
 
     </tr>
   <% end %>
@@ -30,5 +35,9 @@
 </table>
 <br>
 
-<%= link_to 'Novo Produto', new_product_path %>
+<% unless current_user.nil? %>
+  <% unless current_user.adm != true %>
+    <%= link_to 'Novo Produto', new_product_path %>
+  <%end %>
+<% end %>
 <%= link_to 'Meu Carrinho', orders_path%>

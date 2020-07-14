@@ -1,5 +1,18 @@
-<h1>Editing User</h1>
+<% if logged_in? %>
+  <% if current_user.id == @user.id %>
 
-<%= render 'form', user: @user %>
+    <h1>Editing User</h1>
 
-<%= link_to 'Voltar', @user %> |
+    <%= render 'form', user: @user %>
+
+    <%= link_to 'Voltar', @user %>
+
+  <% else %>
+    <h4 style="color: red">Erro: Acesso Negado!</h4>
+  <% end %>
+<% else %>
+  <h4 style="color: red">Oops...Parece que você não está logado</h4>
+  <%= link_to 'Logar', log_in_path %>
+<% end %>
+
+<%= link_to 'Voltar', users_path %>
