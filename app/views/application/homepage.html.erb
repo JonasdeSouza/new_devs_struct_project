@@ -79,14 +79,14 @@
                 <h4>Filtros:</h4>
                 <div id="myBtnContainer">
                   <button class="btn active" onclick="filterSelection('all')">Todos</button>
-                  <%= @categories.each do |category|%> 
+                  <% @categories.each do |category|%> 
                     <button class="btn" onclick="filterSelection('<%=category.name%>')"><%=category.name%></button>
                   <% end %>
                 </div>
                 <!-- Main -->
                 <div class="container">
                   <div class="row">
-                   <%= @products.each do |product|%> 
+                   <% @products.each do |product|%> 
                       <div class="col filterDiv <%=product.category.name%>">
                         <div class="card" style="width: 20rem;">
                           <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
