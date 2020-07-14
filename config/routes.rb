@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'application#homepage'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users, :products, :orders, :addresses
+  post "/checkout", to: "orders#checkout", as: :checkout
+
   #Rotas para as páginas de depositar e retirar dinheiro da conta
   resources :users do
     member do

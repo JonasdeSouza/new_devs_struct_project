@@ -27,7 +27,13 @@
   </table>
 
   <p>
+    <strong>Seu saldo: R$<%= '%.2f' % current_user.balance %></strong>
+  </p>
+
+  <p>
     <strong>Valor final: R$<%= '%.2f' % final_price %></strong>
+
+    <%= link_to 'Finalizar Compra', checkout_path, method: :post%>
   </p>
   <p><%= link_to 'Continuar Comprando', products_path %></p>
 

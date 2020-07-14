@@ -18,13 +18,13 @@
 
   <div class="field">
     <%= form.label :quantity, 'Estoque' %>
-    <%= form.number_field :quantity %>
+    <%= form.number_field :quantity, min: 0 %>
   </div>
 
 
   <div class="field">
     <%= form.label :price, 'Preço' %>
-    <%= form.number_field :price, step: :any %>
+    <%= form.number_field :price, step: :any, min: 0%>
   </div>
 
   <br>

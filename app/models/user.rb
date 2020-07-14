@@ -14,7 +14,9 @@ class User < ApplicationRecord
 
   def change_balance
     if self.balance_changed?
-      self.balance += self.balance_was
+      if !balance_was.nil?
+        self.balance += self.balance_was
+      end
     end
   end
 end
