@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
-  validates :password, length: { minimum: 3 }
+  validates :password, length: { minimum: 3 }, if: :new_user?
   validates :password, confirmation: true
   validates :email, uniqueness: true
   validates :name, :email, :cpf, :birth_date, :addresses, presence: true
@@ -18,5 +18,10 @@ class User < ApplicationRecord
         self.balance += self.balance_was
       end
     end
+  end
+
+  private
+  def new_user?
+    new_record?
   end
 end

@@ -63,12 +63,17 @@ class OrdersController < ApplicationController
     end
 
     def checkout
-        puts "teste"
+
         puts params
+        final = 0.0
         params["_json"].each do |item|
             Order.create(user_id: current_user.id, product_id: item[:id], quantity: item[:count])
+            price = item[:price]
+            qnt = item[:count]
+            final = price * qnt
         end
-
+        current_user.balance = -final
+        current_user.save!
         # Order.all.each do |order|
         #     if order.user_id === current_user.id
         #         begin

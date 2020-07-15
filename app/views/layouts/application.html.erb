@@ -54,11 +54,12 @@
                aria-labelledby="navbarDropdownMenuLink-333 ">
             <% if logged_in? %>
               <a class="dropdown-item" href="#">Bem vindo, <%= current_user.name %></a>
+              <a class="dropdown-item" href="#">Saldo: <%= current_user.balance %></a>
               <a class="dropdown-item" href="users/<%= current_user.id %>">Perfil</a>
               <a class="dropdown-item" href="/log_out">Logout</a>
             <% else %>
               <a class="dropdown-item" href="/log_in">Log In</a>
-              <a class="dropdown-item" href="#  "></a>
+              <a class="dropdown-item" href="<%= new_user_path %>">Cadastro</a>
             <% end %>
           </div>
         </li>
