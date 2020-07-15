@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
         @products = Product.all
         @categories = Category.all
     end
+
 end

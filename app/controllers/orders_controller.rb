@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
- 
+    skip_before_action :verify_authenticity_token, only: :checkout
+
     def index
         @orders = Order.all
         @products = Product.all
@@ -62,29 +63,36 @@ class OrdersController < ApplicationController
     end
 
     def checkout
-        Order.all.each do |order|
-            if order.user_id === current_user.id
-                begin
-                    product = Product.find(order.product_id)
-                    if product.quantity >= order.quantity
-                        product.quantity -= order.quantity
-                        product.save!
-                        order.destroy!
-                        flash[:notice] = "Compra finalizada com sucesso"
-                    else
-                        order.destroy!
-                        flash[:notice] = "Oops! Parece que a quantidade selecionada do produto #{product.name} não está mais disponível. Removendo do carrinho..."
-                        break
-                    end
-                rescue => exc
-                    puts exc
-                    flash[:notice] = exc
-                ensure
-                    redirect_to orders_path
-                end
-            end
+        puts "teste"
+        puts params
+        params["_json"].each do |item|
+            Order.create(user_id: current_user.id, product_id: item[:id], quantity: item[:count])
         end
+
+        # Order.all.each do |order|
+        #     if order.user_id === current_user.id
+        #         begin
+        #             product = Product.find(order.product_id)
+        #             if product.quantity >= order.quantity
+        #                 product.quantity -= order.quantity
+        #                 product.save!
+        #                 order.destroy!
+        #                 flash[:notice] = "Compra finalizada com sucesso"
+        #             else
+        #                 order.destroy!
+        #                 flash[:notice] = "Oops! Parece que a quantidade selecionada do produto #{product.name} não está mais disponível. Removendo do carrinho..."
+        #                 break
+        #             end
+        #         rescue => exc
+        #             puts exc
+        #             flash[:notice] = exc
+        #         ensure
+        #             redirect_to orders_path
+        #         end
+        #     end
+        # end
     end
+    helper_method :checkout
 
     private
 
