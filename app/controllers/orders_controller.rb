@@ -79,11 +79,10 @@ class OrdersController < ApplicationController
                 rescue => exc
                     puts exc
                     flash[:notice] = exc
-                ensure
-                    redirect_to orders_path
                 end
             end
         end
+        redirect_to orders_path
     end
 
     private
