@@ -1,10 +1,27 @@
-<h1>Novo Produto</h1>
+<% if current_user.nil? %>
+  <h4 style="color: red">Erro: é preciso estar logado em uma conta com função de administrador para acessar essa página!</h4>
 
-<%= form_with model: @product do |form| %>
-  <div class="field">
-    <%= form.label :name, 'Nome' %>
-    <%= form.text_field :name %>
-  </div>
+<% elsif current_user.adm != true %>
+  <h4 style="color: red">Erro: é preciso ter permissão de administrador para acessar essa página!</h4>
+
+<% else %>
+  <h1>Novo Produto</h1>
+
+  <%= form_with model: @product do |form| %>
+    <div class="field">
+      <%= form.label :name, 'Nome' %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :brand, 'Marca' %>
+      <%= form.text_field :brand %>
+    </div>
+
+    <div class="field">
+      <%= form.label :volume, 'Volume' %>
+      <%= form.text_field :volume %>
+    </div>
 
   <div class="field">
     <%= form.label :alcoholic, 'Alcoólico?' %>
@@ -31,5 +48,6 @@
   <div class="actions">
     <%= form.submit "Criar produto" %>
   </div>
+  <% end %>
 
 <% end %>

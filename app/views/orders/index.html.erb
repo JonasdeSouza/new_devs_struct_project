@@ -26,6 +26,9 @@
     </tbody>
   </table>
 
+  <% if current_user.balance.nil? %>
+    <% current_user.balance = 0.0 %>
+  <% end %>
   <p>
     <strong>Seu saldo: R$<%= '%.2f' % current_user.balance %></strong>
   </p>

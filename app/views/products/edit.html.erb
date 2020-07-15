@@ -1,35 +1,54 @@
-<h1>Novo Produto</h1>
+<% if current_user.nil? %>
+  <h4 style="color: red">Erro: é preciso estar logado em uma conta com função de administrador para acessar essa página!</h4>
 
-<%= form_with model: @product do |form| %>
-  <div class="field">
-    <%= form.label :name, 'Nome' %>
-    <%= form.text_field :name, value: @product.name %>
-  </div>
+<% elsif current_user.adm != true %>
+  <h4 style="color: red">Erro: é preciso ter permissão de administrador para acessar essa página!</h4>
+<% else %>
+  <h1>Editar Produto</h1>
 
-  <div class="field">
-    <%= form.label :alcoholic, 'Alcoólico?' %>
-    <%= form.select :alcoholic, [['Sim', true], ['Não', false]] %>
-  </div>
+  <%= form_with model: @product do |form| %>
+    <div class="field">
+      <%= form.label :name, 'Nome' %>
+      <%= form.text_field :name, value: @product.name %>
+    </div>
 
-  <div class="field">
-    <%= form.label :categoy_id, 'Categoria' %>
-    <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id] }) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :quantity, 'Estoque' %>
-    <%= form.number_field :quantity, value: @product.quantity %>
-  </div>
+    <div class="field">
+      <%= form.label :brand, 'Marca' %>
+      <%= form.text_field :brand, value: @product.brand %>
+    </div>
 
 
-  <div class="field">
-    <%= form.label :price, 'Preço' %>
-    <%= form.number_field :price, step: :any, value: @product.price %>
-  </div>
+    <div class="field">
+      <%= form.label :volume, 'Volume' %>
+      <%= form.text_field :volume, value: @product.volume %>
+    </div>
 
-  <br>
-  <div class="actions">
-    <%= form.submit "Atualizar produto" %>
-  </div>
+    <div class="field">
+      <%= form.label :alcoholic, 'Alcoólico?' %>
+      <%= form.select :alcoholic, [['Sim', true], ['Não', false]] %>
+    </div>
+
+    <div class="field">
+      <%= form.label :categoy_id, 'Categoria' %>
+      <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id] }) %>
+    </div>
+
+    <div class="field">
+      <%= form.label :quantity, 'Estoque' %>
+      <%= form.number_field :quantity, value: @product.quantity %>
+    </div>
+
+
+    <div class="field">
+      <%= form.label :price, 'Preço' %>
+      <%= form.number_field :price, step: :any, value: @product.price %>
+    </div>
+
+    <br>
+    <div class="actions">
+      <%= form.submit "Atualizar produto" %>
+    </div>
+
+    <% end %>
 
 <% end %>
