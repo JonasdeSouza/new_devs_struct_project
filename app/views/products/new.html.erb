@@ -5,49 +5,53 @@
   <h4 style="color: red">Erro: é preciso ter permissão de administrador para acessar essa página!</h4>
 
 <% else %>
-  <h1>Novo Produto</h1>
+  <%= stylesheet_link_tag 'new_product' %>
 
-  <%= form_with model: @product do |form| %>
-    <div class="field">
-      <%= form.label :name, 'Nome' %>
-      <%= form.text_field :name %>
+  <div style="padding: 0px 0px 20px 0px;">
+    <h1>Novo Produto</h1>
+    <h5>(Completar com os dados do produto)</h5>
+  </div>
+
+  <%=form_with model: @product do |form|%>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <%= form.label :name, 'Nome' %>
+        <%= form.text_field :name, class: 'form-control', placeholder: "Ex: Guaraná"%>
+      </div>
+      <div class="form-group col-md-3">
+        <%= form.label :brand, 'Marca' %>
+        <%= form.text_field :brand, class: 'form-control', placeholder: "Ex: Antártica"%>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <%= form.label :volume, 'Volume' %>
+        <%= form.text_field :volume, class: 'form-control', placeholder: "Ex: 600 ml"%>
+      </div>
+      <div class="form-group col-md-2">
+        <%= form.label :price, 'Preço' %>
+        <%= form.text_field :price, class: 'form-control', placeholder: "Ex: 4,99"%>
+      </div>
+    </div>
+    <div class="form-row" style="padding: 5px 0px 5px 0px;">
+      <div class="form-group col-md-2">
+        <%= form.label :alcoholic, 'Alcoólico' %>
+        <%= form.select :alcoholic, [['Sim', true], ['Não', false]] %>
+      </div>
+      <div class="form-group col-md-2">
+        <%= form.label :category, 'Categoria' %>
+        <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id] }) %>
+      </div>
+    </div>
+    <div class="form-row">
+      <%= form.label :quantity, 'Quantidade em estoque' %>
+      <%= form.number_field :quantity %>
     </div>
 
-    <div class="field">
-      <%= form.label :brand, 'Marca' %>
-      <%= form.text_field :brand %>
+    <div class="row justify-content-center">
+      <div id="button-padding" class="col" style="padding: 8px;">
+        <%= form.submit :Salvar, class: 'btn btn-success' %>
+      </div>
     </div>
-
-    <div class="field">
-      <%= form.label :volume, 'Volume' %>
-      <%= form.text_field :volume %>
-    </div>
-
-  <div class="field">
-    <%= form.label :alcoholic, 'Alcoólico?' %>
-    <%= form.select :alcoholic, [['Sim', true], ['Não', false]] %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category_id, 'Categoria' %>
-    <%= form.select :category_id, options_for_select(Category.all.map { |category| [category.name, category.id] }) %>
-  </div>
-
-  <div class="field">
-    <%= form.label :quantity, 'Estoque' %>
-    <%= form.number_field :quantity, min: 0 %>
-  </div>
-
-
-  <div class="field">
-    <%= form.label :price, 'Preço' %>
-    <%= form.number_field :price, step: :any, min: 0%>
-  </div>
-
-  <br>
-  <div class="actions">
-    <%= form.submit "Criar produto" %>
-  </div>
-  <% end %>
-
-<% end %>
+  <%end%>
+<%end%>

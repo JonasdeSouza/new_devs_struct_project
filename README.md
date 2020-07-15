@@ -8,3 +8,4 @@ Quando iniciar o projeto é necessário rodar no terminal:
 - Entrar no arquivo config/application.yml criado e escrever dentro dele:
     username_postgres: 'username_do_seu_postgresql'
     password_postgres: 'senha_do_seu_postgresql'
+- Por fim, rodar 'npm install -g bundle-js'
