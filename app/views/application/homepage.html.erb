@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/f9680fb690.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,7 +10,7 @@
 </head>
 
 <body>
-
+<%= javascript_include_tag "homepage" %>
 <!-- Main navigation -->
 <header>
   <!-- Full Page Intro -->
@@ -19,16 +20,19 @@
       <div class="d-flex flex-row mb-3">
         <div class="row justify-content-md-center">
           <h4>Filtros:</h4>
-          <%= form_with model: @category do |form| %>
+          <div id="myBtnContainer">
+            <button class="btn" onlick=filterSelection('all')>Todos</button>
+          <%@categories.each do |category| %>
             <div class="field">
-              <%= form.select :name, options_for_select(@categories.map { |category| [category.name, category.id] }) %>
+              <button class="btn" onlick=filterSelection('<%=category.name%>')><%=category.name %></button>
             </div>
           <% end %>
+          </div>
           <!-- Main -->
           <div class="container">
-            <% @products.each do |product| %>
               <div class="row">
-                <div class="col-md-4">
+                <% @products.each do |product| %>
+                <div class="col filterDiv <%=product.category.name%>">
                   <div class="card" style="width: 20rem;">
                     <img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
                     <div class="card-block">
@@ -41,8 +45,8 @@
                     </div>
                   </div>
                 </div>
+                <% end %>
               </div>
-            <% end %>
           </div>
         </div>
       </div>
@@ -80,6 +84,5 @@
 
 </body>
 </html>
-
 
 <%= javascript_include_tag "application" %>

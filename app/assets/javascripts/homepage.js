@@ -308,6 +308,7 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
 function checkout() {
     alert("checkout");
     $.ajax({
@@ -316,5 +317,5 @@ function checkout() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         data: JSON.stringify(shoppingCart.listCart())
-    })
+    });
 }
