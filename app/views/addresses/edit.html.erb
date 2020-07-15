@@ -1,51 +1,61 @@
-<h1>Editar endereço</h1>
+<% if logged_in? %>
+  <% if current_user.id == @address.user_id %>
+    <h1>Editar endereço</h1>
 
-<%= form_with model: @addresses do |form_address| %>
-  <p></p>
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h3>Detalhes do endereço</h3>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="form-group col-md-4">
-      <%= form_address.label :name, 'Apelido do endereço' %>
-      <%= form_address.text_field :name, class: 'form-control' %>
-    </div>
-    <div class="form-group col-md-4">
-      <%= form_address.label :cep, 'CEP' %>
-      <%= form_address.text_field :cep, class: 'form-control' %>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="form-group col-md-8">
-      <%= form_address.label :street, 'Logradouro' %>
-      <%= form_address.text_field :street, class: 'form-control' %>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="form-group col-md-8">
-      <%= form_address.label :complement, 'Complemento' %>
-      <%= form_address.text_field :complement, class: 'form-control' %>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="form-group col-md-4">
-      <%= form_address.label :neighborhood, 'Bairro' %>
-      <%= form_address.text_field :neighborhood, class: 'form-control' %>
-    </div>
-    <div class="form-group col-md-2">
-      <%= form_address.label :city, 'Cidade' %>
-      <%= form_address.text_field :city, class: 'form-control' %>
-    </div>
-    <div class="form-group col-md-2">
-      <%= form_address.label :state, 'Estado' %>
-      <%= form_address.text_field :state, class: 'form-control' %>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div id="button-padding" class="col-md-8">
-      <%= form_address.submit :Cadastrar, class: 'btn btn-success' %>
-    </div>
-  </div>
+    <%= form_with model: @addresses do |form_address| %>
+      <p></p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h3>Detalhes do endereço</h3>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="form-group col-md-4">
+          <%= form_address.label :name, 'Apelido do endereço' %>
+          <%= form_address.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="form-group col-md-4">
+          <%= form_address.label :cep, 'CEP' %>
+          <%= form_address.text_field :cep, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="form-group col-md-8">
+          <%= form_address.label :street, 'Logradouro' %>
+          <%= form_address.text_field :street, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="form-group col-md-8">
+          <%= form_address.label :complement, 'Complemento' %>
+          <%= form_address.text_field :complement, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="form-group col-md-4">
+          <%= form_address.label :neighborhood, 'Bairro' %>
+          <%= form_address.text_field :neighborhood, class: 'form-control' %>
+        </div>
+        <div class="form-group col-md-2">
+          <%= form_address.label :city, 'Cidade' %>
+          <%= form_address.text_field :city, class: 'form-control' %>
+        </div>
+        <div class="form-group col-md-2">
+          <%= form_address.label :state, 'Estado' %>
+          <%= form_address.text_field :state, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div id="button-padding" class="col-md-8">
+          <%= form_address.submit :Cadastrar, class: 'btn btn-success' %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <h4 style="color: red">Erro: Acesso Negado</h4>
+    <%= link_to 'Voltar', addresses_path %>
+  <% end %>
+<% else %>
+  <h4 style="color: red">Oops...Parece que você não está logado</h4>
+  <%= link_to 'Logar', log_in_path %>
 <% end %>

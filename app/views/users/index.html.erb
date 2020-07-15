@@ -56,9 +56,6 @@
 
 <%else %>
   <h4>É preciso logar para ver essa página</h4>
+  <%= link_to 'New User', new_user_path %>
+  <%= link_to 'Log In', log_in_path %>
 <% end %>
-
-  <br>
-
-<%= link_to 'New User', new_user_path %>
-<%= link_to 'Log In', log_in_path %>

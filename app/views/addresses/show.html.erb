@@ -1,14 +1,61 @@
-<h1>Detalhes do endereco</h1>
+<% if logged_in? %>
+  <% if current_user.id == @address.user_id or current_user.adm == true %>
+    <h1>Detalhes do endereco</h1>
 
     <p>
-      <strong>Produto:</strong>
-      <%= @address.user.id %>
+      <strong>Usuário:</strong>
+      <%= @address.user.name %>
     </p>
 
     <p>
-      <strong>Quantidade:</strong>
+      <strong>Apelido:</strong>
       <%= @address.name %>
     </p>
 
-    <%= link_to 'Editar', edit_address_path(@address) %> |
-    <%= link_to 'Voltar', addresses_path %>
+    <p>
+      <strong>CEP:</strong>
+      <%= @address.cep %>
+    </p>
+
+    <p>
+      <strong>Rua:</strong>
+      <%= @address.street %>
+    </p>
+
+    <p>
+      <strong>Complemento:</strong>
+      <%= @address.complement %>
+    </p>
+
+    <p>
+      <strong>Bairro:</strong>
+      <%= @address.neighborhood %>
+    </p>
+
+    <p>
+      <strong>Cidade:</strong>
+      <%= @address.city %>
+    </p>
+
+    <p>
+      <strong>Estado:</strong>
+      <%= @address.state %>
+    </p>
+
+    <p>
+      <strong>Adicionado em:</strong>
+      <%= @address.created_at  %>
+    </p>
+
+    <% if current_user.id == @address.user_id %>
+        <%= link_to 'Editar', edit_address_path(@address) %> |
+    <% end %>
+        <%= link_to 'Voltar', addresses_path %>
+    <% else %>
+        <h4 style="color: red">Erro: Acesso Negado</h4>
+        <%= link_to 'Voltar', addresses_path %>
+    <% end %>
+<% else %>
+  <h4 style="color: red">Oops...Parece que você não está logado</h4>
+  <%= link_to 'Logar', log_in_path %>
+<% end %>
